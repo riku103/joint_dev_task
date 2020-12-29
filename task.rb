@@ -176,7 +176,19 @@ end
 
 class UserQ18
   # 以下に回答を記載
+  def initialize(name: "", age: "")
+    @name = name
+    @age = age
+  end
 
+  def introduce
+    case @age
+    when 32
+      print "こんにちは、#{@name}と申します。宜しくお願いいたします。"
+    when 10
+      print "はいさいまいど〜,#{@name}です！！！"
+    end
+  end
 end
 
 def q18
