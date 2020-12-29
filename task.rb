@@ -182,10 +182,9 @@ class UserQ18
   end
 
   def introduce
-    case @age
-    when 32
+    if @age > 20
       print "こんにちは、#{@name}と申します。宜しくお願いいたします。"
-    when 10
+    else
       print "はいさいまいど〜,#{@name}です！！！"
     end
   end
