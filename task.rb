@@ -149,7 +149,7 @@ end
 
 class UserQ17
   # 以下に回答を記載
-  def initialize(name: "", age: "", gender: "")
+  def initialize(name: , age: , gender: )
     @name = name
     @age = age
     @gender = gender
@@ -176,7 +176,7 @@ end
 
 class UserQ18
   # 以下に回答を記載
-  def initialize(name: "", age: "")
+  def initialize(name: , age: )
     @name = name
     @age = age
   end
