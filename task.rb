@@ -183,9 +183,9 @@ class UserQ18
 
   def introduce
     if @age > 20
-      print "こんにちは、#{@name}と申します。宜しくお願いいたします。"
+      "こんにちは、#{@name}と申します。宜しくお願いいたします。"
     else
-      print "はいさいまいど〜,#{@name}です！！！"
+      "はいさいまいど〜,#{@name}です！！！"
     end
   end
 end
@@ -216,12 +216,33 @@ end
 
 class UserQ20
   # 以下に回答を記載
+  attr_reader :name, :age
 
+  def initialize(**params)
+    @name = params[:name]
+    @age = params[:age]
+  end
 end
 
 class Zoo
   # 以下に回答を記載
+  def initialize(**params)
+    @zoo_name = params[:name]
+    @entry_fee = params[:entry_fee]
+  end
 
+  def info_entry_fee(user)
+    case user.age
+    when 0..5
+      puts "#{user.name}さんの入場料金は #{@entry_fee[:infant]} 円です。"
+    when 6..12
+      puts "#{user.name}さんの入場料金は #{@entry_fee[:children]} 円です。"
+    when 13..64
+      puts "#{user.name}さんの入場料金は #{@entry_fee[:adult]} 円です。"
+    when 65..120
+      puts "#{user.name}さんの入場料金は #{@entry_fee[:senior]} 円です。"
+    end
+  end
 end
 
 
